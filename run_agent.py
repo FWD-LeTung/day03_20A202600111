@@ -6,7 +6,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from src.agent.agent import ReActAgent
-from src.core.openai_provider import OpenAIProvider
 
 
 def _stdout_utf8() -> None:
@@ -99,6 +98,9 @@ def main() -> int:
     if model.lower().startswith("gemini"):
         print(f"WARNING: DEFAULT_MODEL='{model}' looks like a Gemini model. Using 'gpt-4o' for OpenAI.")
         model = "gpt-4o"
+
+    # Lazy import so `pytest` can run without openai installed.
+    from src.core.openai_provider import OpenAIProvider
 
     llm = OpenAIProvider(model_name=model, api_key=api_key)
     agent = ReActAgent(llm=llm, tools=build_tools(), max_steps=5)
