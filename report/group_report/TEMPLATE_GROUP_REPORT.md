@@ -23,8 +23,9 @@ Our agent employs a production-grade ReAct (Reasoning and Acting) loop to handle
 1.  **Thought**: The LLM analyzes the user's intent (e.g., comparing banks or calculating returns).
 2.  **Action**: It invokes `fetch_interest_rates` to retrieve live data or `calculate_savings_interest` for precise math.
 3.  **Observation**: The system feeds the tool's output back into the prompt, allowing the agent to refine its recommendation.
-
+    
 This cycle continues for up to **10 steps** until a comprehensive **Final Answer** is generated, ensuring that financial data is never hallucinated.
+Note: Detail diagram is in the group report.
 
 ### 2.2 Tool Definitions (Inventory)
 | Tool Name | Input Format | Use Case |
