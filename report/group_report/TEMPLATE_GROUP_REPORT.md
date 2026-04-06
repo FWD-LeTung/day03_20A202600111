@@ -1,6 +1,6 @@
 # Group Report: Lab 3 - Production-Grade Agentic System
 
-- **Team Name**: 
+- **Team Name**: BanGanCua
 - **Team Members**: Hồ Bảo Thư, Lê Thanh Thưởng, Nguyễn Đình Hiếu, Trần Văn Tuấn, Lê Đình Việt, Lê Văn Tùng
 - **Deployment Date**: 2026-04-06
 ---
@@ -17,12 +17,12 @@
 ## 2. System Architecture & Tooling
 
 ### 2.1 ReAct Loop Implementation
-*Diagram or description of the Thought-Action-Observation loop.*
+
 
 ### 2.2 Tool Definitions (Inventory)
 | Tool Name | Input Format | Use Case |
 | :--- | :--- | :--- |
-| `calc_tax` | `json` | Calculate VAT based on country code. |
+| `calculate_saving_interest` | `principal` ,`rate_percent`,  `months`| Calculate interest over given duration  |
 | `bank_tools` |  | Search all banks’ interest rates at the present. |
 
 ### 2.3 LLM Providers Used
