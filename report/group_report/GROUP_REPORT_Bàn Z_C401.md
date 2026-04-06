@@ -15,7 +15,7 @@
     * Tính toán tiền lãi đúng
     * Suy luận đa bước không thừa bước
 
-- **Success Rate**: 9/9 test cased
+- **Success Rate**: 10/10 test cased
 - **Key Outcome**: ReAct Agent của nhóm không bị cho ra số liệu ảo như chatbot khi bị hỏi về các số liệu up to date không có trong data train. 
 
 ---
