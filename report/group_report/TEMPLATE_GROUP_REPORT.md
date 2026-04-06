@@ -26,25 +26,6 @@ Our agent employs a production-grade ReAct (Reasoning and Acting) loop to handle
 
 This cycle continues for up to **10 steps** until a comprehensive **Final Answer** is generated, ensuring that financial data is never hallucinated.
 
-```mermaid
-graph TD
-    Start(["Input: Banking Query"]) --> Init["Init Context (Prompt + Question)"]
-    Init --> Loop{"Loop: steps < 10?"}
-    
-    Loop -- Yes --> LLM["LLM: Generate Thought + Action"]
-    LLM --> Parse["Parse: Tool Name & JSON Args"]
-    
-    Parse --> Exec["Execute: fetch_rate or calculate_interest"]
-    Exec --> Obs["Observation: Live Bank Data/Calculated Result"]
-    Obs --> Context["Update Context with Observation"]
-    Context --> Increment["Steps++"]
-    Increment --> Loop
-    
-    Parse -- Final Answer Found --> Success(["Output: Accurate Financial Advice"])
-    Loop -- No --> Timeout(["Max Steps Reached: Timeout Error"])
-
-
-
 ### 2.2 Tool Definitions (Inventory)
 | Tool Name | Input Format | Use Case |
 | :--- | :--- | :--- |
