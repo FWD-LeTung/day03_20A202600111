@@ -23,9 +23,9 @@ Luồng ReAct triển khai trong `src/agent/agent.py`:
 
 ```mermaid
 flowchart TD
-  A[User Input] --> B[LLM Generate<br/>Thought/Action or Final]
+  A[User Input] --> B["LLM Generate<br/>Thought / Action / Final"]
   B -->|Final Answer| F[Return Answer]
-  B -->|Action: tool(args)| C[Parse Action]
+  B -->|Action: tool args| C[Parse Action]
   C --> D[Execute Tool]
   D --> E[Append Observation to prompt/history]
   E --> B
