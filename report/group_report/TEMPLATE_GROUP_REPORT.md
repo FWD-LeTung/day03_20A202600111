@@ -23,7 +23,7 @@
 | Tool Name | Input Format | Use Case |
 | :--- | :--- | :--- |
 | `calc_tax` | `json` | Calculate VAT based on country code. |
-| `search_api` | `string` | Retrieve real-time information from Google Search. |
+| `bank_tools` |  | Search all banks’ interest rates at the present. |
 
 ### 2.3 LLM Providers Used
 - **Primary**: [e.g., GPT-4o]
